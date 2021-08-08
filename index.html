@@ -17,7 +17,7 @@
       <input type="email" name="email" placeholder="Email" class="form__email" required>
       <textarea name="message" cols="30" rows="5" placeholder="Message" class="form__message" spellcheck="false"
         required></textarea>
-      <button class="form__button">Send</button>
+      <input type="submit" class="form__button" value="Send">
 
       <input type="hidden" name="_subject">
     </form>
@@ -35,7 +35,7 @@
 
     const urlParams = new URL(window.location.href).searchParams;
 
-    urlParamsNames.forEach((paramName) => {
+    urlParamsNames.forEach(paramName => {
       const value = urlParams.get(paramName);
       if (value) {
         const hiddenField = document.createElement('input');
